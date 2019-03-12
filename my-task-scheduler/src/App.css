@@ -1,16 +1,7 @@
-.App {
-    text-align: center;
-}
-
 .App-logo {
     animation: App-logo-spin infinite 20s linear;
-    height: 10vmin;
+    height: 5vmin;
     pointer-events: none;
-}
-
-nav {
-    background-color: white;
-    padding: 20px;
 }
 
 @keyframes App-logo-spin {
