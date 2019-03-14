@@ -3,20 +3,14 @@
         {
             "title": "Task 1",
             "responsible": "Franco",
-            "description": "lorem impsum 1",
-            "priority": "low"
+            "description": "Create a React app!",
+            "priority": "high"
         },
         {
             "title": "Task 2",
             "responsible": "Pau",
-            "description": "lorem impsum 2",
+            "description": "Study for the exam!",
             "priority": "medium"
-        },
-        {
-            "title": "Task 3",
-            "responsible": "Pau",
-            "description": "lorem impsum 3",
-            "priority": "high"
         }
     ]
 }
