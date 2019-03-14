@@ -13,6 +13,8 @@ class App extends Component {
         this.state = {
             tasks: tasks
         };
+
+        this.addTask = this.addTask.bind(this);
     }
 
     render() {
@@ -21,7 +23,7 @@ class App extends Component {
 
         const tasks = this.state.tasks.map((task, i) => {
                             return (
-                                <div className="col-md-4">
+                                <div className="col-md-4 mt-1" key={i}>
                                     <div className="card text-center">
                                         <div className="card-header">
                                             <h3>{ task.title }</h3>
@@ -31,10 +33,10 @@ class App extends Component {
                                         </div>
                                         <div className="card-body">
                                             <h5 className="card-title">{ task.responsible }</h5>
-                                            <p class="card-text">{ task.description }</p>
+                                            <p className="card-text">{ task.description }</p>
                                         </div>
-                                        <div class="card-footer text-muted">
-                                            <a href="#" class="btn btn-dark">Done</a>
+                                        <div className="card-footer text-muted">
+                                            <button className="btn btn-dark" onClick={this.removeTask.bind(this, i)}>Done</button>
                                         </div>
                                     </div>
                                 </div>)
@@ -49,7 +51,7 @@ class App extends Component {
                 <div className="container">
                     <div className="row mt-4">
                         <div className="col-md-3">
-                            <TaskForm/>
+                            <TaskForm onAddTask={this.addTask}/>
                         </div>
                         <div className="col-md-9">
                             <div className="row">
@@ -61,6 +63,25 @@ class App extends Component {
             </div>
         );
     }
+
+    addTask(newTask){
+        this.setState({
+            tasks : [...this.state.tasks, newTask]
+        })
+    }
+
+    removeTask(taskIndex){
+        if(!window.confirm("Are you sure you want to delete this task??"))
+        return;
+
+        this.setState({
+            tasks: this.state.tasks.filter((task,i) => 
+            {
+                return i !== taskIndex
+            })
+        })
+    }
+
 }
 
 export default App;
