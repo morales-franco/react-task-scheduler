@@ -1,8 +1,9 @@
 # react-task-scheduler
 ## Basic Task Scheduler
 
-> First Application in React.js - Testing React in a simple application.
-> GitHub Hosting: [Test - Demo](https://morales-franco.github.io/react-task-scheduler) 
+First Application in React.js - Testing React in a simple application.
+
+GitHub Hosting: [Test - Demo](https://morales-franco.github.io/react-task-scheduler) 
 
 ### Use GitHub Pages for Hosting
 1. npm install gh-pages
